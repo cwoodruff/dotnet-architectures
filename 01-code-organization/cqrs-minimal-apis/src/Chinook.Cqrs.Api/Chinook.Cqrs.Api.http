@@ -1,0 +1,13 @@
+@Chinook.Cqrs.Api_HostAddress = http://localhost:5239
+
+GET {{Chinook.Cqrs.Api_HostAddress}}/artists
+Accept: application/json
+
+###
+
+POST {{Chinook.Cqrs.Api_HostAddress}}/playlists
+Content-Type: application/json
+
+{ "name": "Scaffold check" }
+
+###
