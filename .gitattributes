@@ -1,0 +1,2 @@
+# The canonical Chinook script and its generated Docker copy are UTF-16LE with CRLF; never normalize them.
+database/*.sql binary
