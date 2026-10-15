@@ -1,0 +1,11 @@
+@Api = http://localhost:5169
+
+### Tenant from the header
+GET {{Api}}/artists
+X-Tenant: us
+
+### Tenant from the first path segment
+GET {{Api}}/eu/artists
+
+### No tenant: 400 with problem details
+GET {{Api}}/artists
