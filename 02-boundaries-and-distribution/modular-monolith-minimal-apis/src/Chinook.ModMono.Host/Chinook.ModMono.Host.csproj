@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.ModMono.Modules.Catalog\Chinook.ModMono.Modules.Catalog.csproj" />
+    <ProjectReference Include="..\Chinook.ModMono.Modules.Sales\Chinook.ModMono.Modules.Sales.csproj" />
+    <ProjectReference Include="..\Chinook.ModMono.Modules.Playlists\Chinook.ModMono.Modules.Playlists.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+@Host = http://localhost:5134
+
+GET {{Host}}/artists
+Accept: application/json
+
+###
