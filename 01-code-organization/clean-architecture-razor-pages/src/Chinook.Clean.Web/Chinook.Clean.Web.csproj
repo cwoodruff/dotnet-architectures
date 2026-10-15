@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Clean.Application\Chinook.Clean.Application.csproj" />
+    <ProjectReference Include="..\Chinook.Clean.Infrastructure\Chinook.Clean.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>
