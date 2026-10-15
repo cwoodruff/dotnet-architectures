@@ -13,6 +13,7 @@ failed=0
 has_skip_marker() {
   # True if the given directory, or any ancestor up to the repo root, has a .skip-build marker.
   local dir="$1"
+  # Paths are absolute (find runs from $root), so this walk always reaches $root.
   while [[ "$dir" != "$root" && "$dir" != "/" ]]; do
     [[ -f "$dir/.skip-build" ]] && return 0
     dir="$(dirname "$dir")"
@@ -22,7 +23,7 @@ has_skip_marker() {
 
 while IFS= read -r sln; do
   dir="$(dirname "$sln")"
-  name="${sln#./}"
+  name="${sln#"$root"/}"
   if has_skip_marker "$dir"; then
     results+=("SKIP|$name")
     continue
@@ -35,7 +36,7 @@ while IFS= read -r sln; do
   done < <(find "$dir" -mindepth 2 -name .skip-build -not -path '*/bin/*' -not -path '*/obj/*')
 
   if [[ ${#skipped_projects[@]} -eq 0 ]]; then
-    if dotnet build "$sln" -c Release --nologo -v quiet; then
+    if echo ">> $name" && dotnet build "$sln" -c Release --nologo -v quiet --disable-build-servers; then
       results+=("PASS|$name")
     else
       results+=("FAIL|$name")
@@ -50,7 +51,7 @@ while IFS= read -r sln; do
         [[ "$proj_dir" == "$s" || "$proj_dir" == "$s"/* ]] && skip=1
       done
       [[ $skip -eq 1 ]] && continue
-      dotnet build "$proj" -c Release --nologo -v quiet || ok=0
+      echo ">> $proj" && dotnet build "$proj" -c Release --nologo -v quiet --disable-build-servers || ok=0
     done < <(find "$dir" -name '*.csproj' -not -path '*/bin/*' -not -path '*/obj/*' | sort)
     if [[ $ok -eq 1 ]]; then
       results+=("PASS|$name (partial: ${#skipped_projects[@]} project(s) skipped)")
@@ -59,7 +60,7 @@ while IFS= read -r sln; do
       failed=1
     fi
   fi
-done < <(find ./0[1-5]-* -name '*.sln' -not -path '*/bin/*' -not -path '*/obj/*' | sort)
+done < <(find "$root"/0[1-5]-* -name '*.sln' -not -path '*/bin/*' -not -path '*/obj/*' | sort)
 
 echo
 printf '%-6s %s\n' "RESULT" "SOLUTION"

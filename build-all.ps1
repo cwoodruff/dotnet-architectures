@@ -35,7 +35,8 @@ foreach ($sln in $solutions) {
         ForEach-Object { $_.DirectoryName }
 
     if (-not $skipped) {
-        dotnet build $sln.FullName -c Release --nologo -v quiet
+        Write-Host ">> $name"
+        dotnet build $sln.FullName -c Release --nologo -v quiet --disable-build-servers
         $ok = $LASTEXITCODE -eq 0
         $label = $name
     }
@@ -46,7 +47,8 @@ foreach ($sln in $solutions) {
         foreach ($proj in $projects) {
             $inSkipped = $skipped | Where-Object { $proj.DirectoryName -eq $_ -or $proj.DirectoryName.StartsWith($_ + [IO.Path]::DirectorySeparatorChar) }
             if ($inSkipped) { continue }
-            dotnet build $proj.FullName -c Release --nologo -v quiet
+            Write-Host ">> $($proj.FullName)"
+            dotnet build $proj.FullName -c Release --nologo -v quiet --disable-build-servers
             if ($LASTEXITCODE -ne 0) { $ok = $false }
         }
         $label = "$name (partial: $(@($skipped).Count) project(s) skipped)"
