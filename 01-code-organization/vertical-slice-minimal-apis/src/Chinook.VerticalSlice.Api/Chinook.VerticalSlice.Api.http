@@ -1,0 +1,6 @@
+@Chinook.VerticalSlice.Api_HostAddress = http://localhost:5211
+
+GET {{Chinook.VerticalSlice.Api_HostAddress}}/artists
+Accept: application/json
+
+###
