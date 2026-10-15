@@ -1,0 +1,19 @@
+@page
+@model ArtistsModel
+@{
+    ViewData["Title"] = "Artists";
+}
+
+<h1>Artists</h1>
+<p>The first ten artists by name, with their album counts. The button asks the server for the list again and htmx swaps the returned HTML in place; no JSON, no client-side rendering.</p>
+
+<button class="btn btn-primary mb-3"
+        hx-get="/Artists?handler=List"
+        hx-target="#artist-list"
+        hx-swap="innerHTML">
+    Reload list
+</button>
+
+<div id="artist-list">
+    <partial name="_ArtistList" model="Model.Artists" />
+</div>

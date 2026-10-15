@@ -1,0 +1,14 @@
+@model IReadOnlyList<ArtistSummary>
+
+<table class="table">
+    <thead>
+        <tr><th>Artist</th><th>Albums</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var artist in Model)
+        {
+            <tr><td>@artist.Name</td><td>@artist.AlbumCount</td></tr>
+        }
+    </tbody>
+</table>
+<p class="text-muted small">Rendered at @DateTime.Now.ToString("T")</p>
