@@ -1,0 +1,15 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Micro.Catalog.Api\Chinook.Micro.Catalog.Api.csproj" />
+    <ProjectReference Include="..\Chinook.Micro.Sales.Api\Chinook.Micro.Sales.Api.csproj" />
+    <ProjectReference Include="..\Chinook.Micro.Playlists.Api\Chinook.Micro.Playlists.Api.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>39c10f10-f32a-4c7a-b529-89c77be52428</UserSecretsId>
+  </PropertyGroup>
+
+</Project>
