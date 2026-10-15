@@ -1,0 +1,45 @@
+@page "/"
+@attribute [StreamRendering(true)]
+@attribute [OutputCache(Duration = 5)]
+
+@inject ArtistsApiClient ArtistsApi
+
+<PageTitle>Artists</PageTitle>
+
+<h1>Artists</h1>
+
+<p>The first ten artists by name, with their album counts, from <code>GET /artists</code> on the ApiService.</p>
+
+@if (artists is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Artist</th>
+                <th>Albums</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var artist in artists)
+            {
+                <tr>
+                    <td>@artist.Name</td>
+                    <td>@artist.AlbumCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ArtistSummary[]? artists;
+
+    protected override async Task OnInitializedAsync()
+    {
+        artists = await ArtistsApi.GetTopArtistsAsync();
+    }
+}

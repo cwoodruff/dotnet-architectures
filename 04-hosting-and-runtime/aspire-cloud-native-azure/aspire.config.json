@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "src/Chinook.CloudNative.AppHost/Chinook.CloudNative.AppHost.csproj"
+  }
+}

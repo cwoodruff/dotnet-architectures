@@ -1,0 +1,14 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>ddb01401-1aa5-4ed6-9f61-6b1a1f0c17d9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.CloudNative.ApiService\Chinook.CloudNative.ApiService.csproj" />
+    <ProjectReference Include="..\Chinook.CloudNative.Web\Chinook.CloudNative.Web.csproj" />
+  </ItemGroup>
+
+</Project>
