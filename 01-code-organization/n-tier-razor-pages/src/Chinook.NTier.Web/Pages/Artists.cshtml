@@ -1,0 +1,20 @@
+@page
+@model ArtistsModel
+@{
+    ViewData["Title"] = "Artists";
+}
+
+<h1>Artists</h1>
+<p>The first ten artists by name, with their album counts. Web calls Business calls Data.</p>
+
+<table class="table">
+    <thead>
+        <tr><th>Artist</th><th>Albums</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var artist in Model.Artists)
+        {
+            <tr><td>@artist.Name</td><td>@artist.AlbumCount</td></tr>
+        }
+    </tbody>
+</table>

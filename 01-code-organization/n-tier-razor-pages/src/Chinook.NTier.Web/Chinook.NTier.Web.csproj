@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.NTier.Business\Chinook.NTier.Business.csproj" />
+  </ItemGroup>
+
+
+</Project>
