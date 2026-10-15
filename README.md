@@ -74,28 +74,28 @@ Each example folder has its own solution file, its own README, and no project re
 
 ## Status
 
-| Example                        | Axis                        | Status  |
-| ------------------------------ | --------------------------- | ------- |
-| n-tier-razor-pages             | Code organization           | Planned |
-| clean-architecture-razor-pages | Code organization           | Planned |
-| vertical-slice-minimal-apis    | Code organization           | Planned |
-| cqrs-minimal-apis              | Code organization           | Planned |
-| cqrs-event-sourcing-sqlserver  | Code organization           | Planned |
-| modular-monolith-minimal-apis  | Boundaries and distribution | Planned |
-| microservices-minimal-apis     | Boundaries and distribution | Planned |
-| event-driven-outbox-wolverine  | Boundaries and distribution | Planned |
-| orleans-actors                 | Boundaries and distribution | Planned |
-| bff-gateway-yarp               | Boundaries and distribution | Planned |
-| razor-pages-htmx               | UI delivery                 | Planned |
-| blazor-server                  | UI delivery                 | Planned |
-| blazor-wasm                    | UI delivery                 | Planned |
-| blazor-auto                    | UI delivery                 | Planned |
-| maui-mvvm                      | UI delivery                 | Planned |
-| aspire-cloud-native-azure      | Hosting and runtime         | Planned |
-| azure-functions-durable        | Hosting and runtime         | Planned |
-| worker-service                 | Hosting and runtime         | Planned |
-| multi-tenant-saas              | Cross-cutting               | Planned |
-| strangler-fig                  | Cross-cutting               | Planned |
+| Example                        | Axis                        | Status                                                |
+| ------------------------------ | --------------------------- | ----------------------------------------------------- |
+| n-tier-razor-pages             | Code organization           | Scaffolded                                            |
+| clean-architecture-razor-pages | Code organization           | Scaffolded                                            |
+| vertical-slice-minimal-apis    | Code organization           | Scaffolded                                            |
+| cqrs-minimal-apis              | Code organization           | Scaffolded                                            |
+| cqrs-event-sourcing-sqlserver  | Code organization           | Scaffolded                                            |
+| modular-monolith-minimal-apis  | Boundaries and distribution | Scaffolded                                            |
+| microservices-minimal-apis     | Boundaries and distribution | Scaffolded                                            |
+| event-driven-outbox-wolverine  | Boundaries and distribution | Scaffolded                                            |
+| orleans-actors                 | Boundaries and distribution | Scaffolded                                            |
+| bff-gateway-yarp               | Boundaries and distribution | Scaffolded                                            |
+| razor-pages-htmx               | UI delivery                 | Scaffolded                                            |
+| blazor-server                  | UI delivery                 | Scaffolded                                            |
+| blazor-wasm                    | UI delivery                 | Scaffolded                                            |
+| blazor-auto                    | UI delivery                 | Scaffolded                                            |
+| maui-mvvm                      | UI delivery                 | Scaffolded (build skipped: MAUI workload unavailable) |
+| aspire-cloud-native-azure      | Hosting and runtime         | Scaffolded                                            |
+| azure-functions-durable        | Hosting and runtime         | Scaffolded                                            |
+| worker-service                 | Hosting and runtime         | Scaffolded                                            |
+| multi-tenant-saas              | Cross-cutting               | Scaffolded                                            |
+| strangler-fig                  | Cross-cutting               | Scaffolded                                            |
 
 ## Conventions
 
