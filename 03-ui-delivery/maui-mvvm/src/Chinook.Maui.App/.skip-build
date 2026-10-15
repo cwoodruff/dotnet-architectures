@@ -1,0 +1,4 @@
+The .NET MAUI workload was not installable in the environment where this example was scaffolded
+(`dotnet workload install maui` needs elevated permissions there, and Xcode is not installed).
+build-all.sh and build-all.ps1 skip this project and still build the rest of the maui-mvvm solution.
+To build it: `dotnet workload install maui`, then `dotnet build src/Chinook.Maui.App -f net10.0-android`.
