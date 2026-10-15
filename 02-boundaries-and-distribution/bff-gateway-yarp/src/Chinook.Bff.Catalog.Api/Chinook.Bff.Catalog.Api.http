@@ -1,0 +1,2 @@
+GET http://localhost:5214/artists
+Accept: application/json

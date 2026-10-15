@@ -1,0 +1,16 @@
+@Gateway = http://localhost:5167
+
+GET {{Gateway}}/api/catalog/artists
+Accept: application/json
+
+###
+
+GET {{Gateway}}/api/customers/newest?count=5
+Accept: application/json
+
+###
+
+GET {{Gateway}}/bff/home
+Accept: application/json
+
+###

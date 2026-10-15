@@ -1,0 +1,2 @@
+GET http://localhost:5272/customers/newest
+Accept: application/json

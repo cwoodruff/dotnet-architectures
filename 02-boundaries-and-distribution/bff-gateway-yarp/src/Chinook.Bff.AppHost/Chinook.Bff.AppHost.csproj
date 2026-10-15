@@ -1,0 +1,15 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Bff.Gateway\Chinook.Bff.Gateway.csproj" />
+    <ProjectReference Include="..\Chinook.Bff.Catalog.Api\Chinook.Bff.Catalog.Api.csproj" />
+    <ProjectReference Include="..\Chinook.Bff.Customers.Api\Chinook.Bff.Customers.Api.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>7ac5ca12-5857-4b43-a703-fded43dee17e</UserSecretsId>
+  </PropertyGroup>
+
+</Project>
