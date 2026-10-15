@@ -1,0 +1,15 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Strangler.Legacy\Chinook.Strangler.Legacy.csproj" />
+    <ProjectReference Include="..\Chinook.Strangler.Modern.Api\Chinook.Strangler.Modern.Api.csproj" />
+    <ProjectReference Include="..\Chinook.Strangler.Facade\Chinook.Strangler.Facade.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>7138f922-3fa7-449f-9a2d-d742b061e87b</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

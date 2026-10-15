@@ -1,0 +1,12 @@
+@Facade = http://localhost:5246
+
+# Goes to Modern
+GET {{Facade}}/artists
+Accept: application/json
+
+###
+
+# Goes to Legacy
+GET {{Facade}}/Albums?artistId=1
+
+###

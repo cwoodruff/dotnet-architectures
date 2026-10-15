@@ -1,0 +1,14 @@
+@model List<Chinook.Strangler.Legacy.Models.ArtistRecord>
+@{
+    ViewData["Title"] = "Artists (legacy)";
+}
+
+<h1>Artists</h1>
+<p>Served by the Legacy app from <code>sproc_GetArtist</code>.</p>
+
+<ul>
+    @foreach (var artist in Model)
+    {
+        <li><a asp-controller="Albums" asp-action="Index" asp-route-artistId="@artist.Id">@artist.Name</a></li>
+    }
+</ul>

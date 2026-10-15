@@ -1,0 +1,21 @@
+@model Chinook.Strangler.Legacy.Models.AlbumsViewModel
+@{
+    ViewData["Title"] = "Albums (legacy)";
+}
+
+<h1>Albums for artist @Model.ArtistId</h1>
+<p>Served by the Legacy app from <code>sproc_GetAlbumByArtist</code>.</p>
+
+@if (Model.Albums.Count == 0)
+{
+    <p>No albums.</p>
+}
+else
+{
+    <ul>
+        @foreach (var album in Model.Albums)
+        {
+            <li>@album.Title</li>
+        }
+    </ul>
+}
