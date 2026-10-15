@@ -1,0 +1,11 @@
+@Chinook.Orleans.Api_HostAddress = http://localhost:5173
+
+GET {{Chinook.Orleans.Api_HostAddress}}/artists
+Accept: application/json
+
+###
+
+GET {{Chinook.Orleans.Api_HostAddress}}/playlists/1/ping
+Accept: application/json
+
+###
