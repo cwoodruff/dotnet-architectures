@@ -1,0 +1,41 @@
+@page "/artists"
+@rendermode InteractiveAuto
+@using Chinook.BlazorAuto.Web.Client.Artists
+@inject IArtistsClient ArtistsClient
+
+<PageTitle>Artists</PageTitle>
+
+<h1>Artists</h1>
+<p>The first ten artists by name, with their album counts. This component is rendering on <strong>@RendererInfo.Name</strong>@(RendererInfo.IsInteractive ? " (interactive)" : " (prerendering)").</p>
+
+<button class="btn btn-primary mb-3" @onclick="LoadAsync" disabled="@(!RendererInfo.IsInteractive)">Reload</button>
+
+@if (artists is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr><th>Artist</th><th>Albums</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var artist in artists)
+            {
+                <tr><td>@artist.Name</td><td>@artist.AlbumCount</td></tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IReadOnlyList<ArtistSummary>? artists;
+
+    protected override Task OnInitializedAsync() => LoadAsync();
+
+    private async Task LoadAsync()
+    {
+        artists = await ArtistsClient.GetTopArtistsAsync();
+    }
+}
