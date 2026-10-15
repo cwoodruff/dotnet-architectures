@@ -1,0 +1,14 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.1">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.EventDriven.Sales.Api\Chinook.EventDriven.Sales.Api.csproj" />
+    <ProjectReference Include="..\Chinook.EventDriven.Notifications.Worker\Chinook.EventDriven.Notifications.Worker.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
+    <UserSecretsId>53f0128e-c750-47b9-a0bd-37ea5584f1af</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

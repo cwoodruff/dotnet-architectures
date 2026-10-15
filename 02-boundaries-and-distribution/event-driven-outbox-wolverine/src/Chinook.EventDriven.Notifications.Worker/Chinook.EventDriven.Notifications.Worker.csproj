@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <UserSecretsId>dotnet-Chinook.EventDriven.Notifications.Worker-ed1a4113-375a-4245-a86e-8df552e24507</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.13" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+    <PackageReference Include="WolverineFx" Version="6.50.2" />
+    <PackageReference Include="WolverineFx.RuntimeCompilation" Version="6.50.2" />
+    <PackageReference Include="WolverineFx.SqlServer" Version="6.50.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.EventDriven.Contracts\Chinook.EventDriven.Contracts.csproj" />
+    <ProjectReference Include="..\Chinook.EventDriven.ServiceDefaults\Chinook.EventDriven.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>
